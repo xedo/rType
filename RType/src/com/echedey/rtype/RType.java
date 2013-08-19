@@ -10,6 +10,7 @@ import javax.swing.JLabel;
 
 public class RType implements ActionListener {
 	private JFrame menu;
+	private JButton btnEasy, btnNorm, btnHard, btnNM;
 	
 	public RType(){
 		//Window
@@ -27,20 +28,20 @@ public class RType implements ActionListener {
 		menu.add(welcome);
 		
 		//Buttons
-		JButton btnEasy = new JButton("Easy");
+		btnEasy = new JButton("Easy");
 		btnEasy.addActionListener(this);
 		menu.add(btnEasy);
 		
-		JButton btnNorm = new JButton("Normal");
-		btnEasy.addActionListener(this);
+		btnNorm = new JButton("Normal");
+		btnNorm.addActionListener(this);
 		menu.add(btnNorm);
 		
-		JButton btnHard = new JButton("Hard");
-		btnEasy.addActionListener(this);
+		btnHard = new JButton("Hard");
+		btnHard.addActionListener(this);
 		menu.add(btnHard);
 		
-		JButton btnNM = new JButton("Night Mare");
-		btnEasy.addActionListener(this);
+		btnNM = new JButton("Night Mare");
+		btnNM.addActionListener(this);
 		menu.add(btnNM);
 		
 		//Center window
@@ -50,9 +51,9 @@ public class RType implements ActionListener {
 	}
 	
 	@Override
-	public void actionPerformed(ActionEvent arg0) {
-		
-		
+	public void actionPerformed(ActionEvent e) {
+//		game(e.getActionCommand());
+		System.out.println(e.getActionCommand());
 	}
 	public static void main(String[] args) {
 	   new RType();
