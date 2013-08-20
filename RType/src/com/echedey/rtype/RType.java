@@ -19,8 +19,8 @@ public class RType implements ActionListener {
 		menu.setSize(300, 300);
 		menu.setResizable(false);
 		menu.setAlwaysOnTop(false);
-		menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		menu.setTitle("RType");
+		menu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		//Menssage
 		JLabel welcome = new JLabel ("Difficulty");
@@ -54,6 +54,7 @@ public class RType implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 //		game(e.getActionCommand());
 		System.out.println(e.getActionCommand());
+		menu.dispose();
 	}
 	public static void main(String[] args) {
 	   new RType();
