@@ -25,11 +25,16 @@ public class Animation extends JPanel implements ActionListener{
 	@Override
 	public void paint(Graphics g){
 		super.paint(g);
+		//set graphics
 		g.dispose();
 	}
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		//move spacecraft
+		//move missiles
+		//move enemies
+		
 		repaint();
 		
 	}
