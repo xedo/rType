@@ -5,7 +5,7 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 
 public class Craft {
-	protected String imgURL = "../craft.png";
+	private String imgURL = "../craft.png";
 	private int x, y;
 	private int movX, movY;
 	private Image img;
