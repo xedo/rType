@@ -14,6 +14,11 @@ public class Craft {
 		ImageIcon craft = new ImageIcon(imgURL);
 		img = craft.getImage();
 	}
+	
+	public void move (){
+		x += movX;
+		y += movY;
+	}
 
 	public Image getImg() {
 		return img;
@@ -25,6 +30,14 @@ public class Craft {
 
 	public int getY() {
 		return y;
+	}
+
+	public void setMovX(int movX) {
+		this.movX = movX;
+	}
+
+	public void setMovY(int movY) {
+		this.movY = movY;
 	}
 	
 	
