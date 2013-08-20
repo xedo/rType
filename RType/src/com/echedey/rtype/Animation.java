@@ -11,8 +11,8 @@ import javax.swing.Timer;
 
 public class Animation extends JPanel implements ActionListener{
 	
-	Image img;
-	Timer time;
+	private Image img;
+	private Timer time;
 	int x, y; //position
 	
 	public Animation(String level){
