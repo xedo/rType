@@ -3,10 +3,10 @@ package com.echedey.rtype;
 import java.awt.event.KeyEvent;
 
 public class SpaceCraft extends Craft {
-	private String imgURL = "../spaceCraft.png";
 	
 	public SpaceCraft (){
 		super();
+		imgURL = "../spaceCraft.png";
 		
 	}
 	
