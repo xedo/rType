@@ -6,7 +6,7 @@ public class SpaceCraft extends Craft {
 	
 	public SpaceCraft (){
 		super();
-		imgURL = "../spaceCraft.png";
+		imgURL = "./spaceCraft.png";
 	}
 	
 	public void pressKey (KeyEvent k){
