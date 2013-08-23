@@ -52,10 +52,22 @@ public class RType implements ActionListener {
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-//		game(e.getActionCommand());
+		play(e.getActionCommand());
 		System.out.println(e.getActionCommand());
-		menu.dispose();
+//		menu.dispose();
 	}
+	private void play(String level) {
+		JFrame window = new JFrame();
+		window.setTitle("RType - level: " + level);
+		window.setSize(800, 600);
+		window.setResizable(false);
+		window.setLocationRelativeTo(null);
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		window.add(new Animation(level));
+		window.setVisible(true);
+		
+	}
+
 	public static void main(String[] args) {
 	   new RType();
 	}
