@@ -7,6 +7,10 @@ public class SpaceCraft extends Craft {
 	public SpaceCraft (){
 		super();
 		imgURL = "./spaceCraft.png";
+		speed = 10;
+		//default position
+		x = 30;
+		y = 250;
 	}
 	
 	public void pressKey (KeyEvent k){
