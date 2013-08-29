@@ -11,6 +11,11 @@ public class SpaceCraft extends Craft {
 		//default position
 		x = 30;
 		y = 250;
+		//limit space
+		maxX = 800; // - width image
+		maxY = 600; // - height image
+		minX = 0;
+		minY = 0;
 	}
 	
 	public void pressKey (KeyEvent k){
