@@ -11,15 +11,15 @@ public class Craft {
 	protected int minY, minX;
 	private int movX, movY;
 	protected int speed = 1;
-	private Image img;
+	protected Image img;
 	
 	public Craft(){
 		ImageIcon imgIcon = new ImageIcon(this.getClass().getResource(imgURL));
 		img = imgIcon.getImage().getScaledInstance(60, 50, java.awt.Image.SCALE_SMOOTH);
-//		maxX = 800;
-//		maxY = 600;
-//		minX = 0;
-//		minY = 0;
+		maxX = 800;
+		maxY = 600;
+		minX = 0;
+		minY = 0;
 	}
 	
 	public void move (){
