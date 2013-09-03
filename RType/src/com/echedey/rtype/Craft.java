@@ -5,13 +5,13 @@ import java.awt.Image;
 import javax.swing.ImageIcon;
 
 public class Craft {
-	protected String imgURL = "./craft.png";
-	protected int x, y;
-	protected int maxY, maxX;
-	protected int minY, minX;
+	private String imgURL = "./craft.png";
+	private int x, y;
+	private int maxY, maxX;
+	private int minY, minX;
 	private int movX, movY;
-	protected int speed = 1;
-	protected Image img;
+	private int speed = 1;
+	private Image img;
 	
 	public Craft(){
 		ImageIcon imgIcon = new ImageIcon(this.getClass().getResource(imgURL));
@@ -43,22 +43,89 @@ public class Craft {
 	public Image getImg() {
 		return img;
 	}
+	
+	public void setImg(Image img) {
+		this.img = img;
+	}
 
 	public int getX() {
 		return x;
 	}
 
+	public void setX(int x) {
+		this.x = x;
+	}
+
 	public int getY() {
 		return y;
 	}
+	
+	public void setY(int y) {
+		this.y = y;
+	}
 
+	public int getMovX() {
+		return movX;
+	}
+	
 	public void setMovX(int movX) {
 		this.movX = movX;
 	}
 
+	public int getMovY() {
+		return movY;
+	}
+	
 	public void setMovY(int movY) {
 		this.movY = movY;
 	}
-	
+
+	public int getSpeed() {
+		return speed;
+	}
+
+	public void setSpeed(int speed) {
+		this.speed = speed;
+	}
+
+	public String getImgURL() {
+		return imgURL;
+	}
+
+	public void setImgURL(String imgURL) {
+		this.imgURL = imgURL;
+	}
+
+	public int getMaxY() {
+		return maxY;
+	}
+
+	public void setMaxY(int maxY) {
+		this.maxY = maxY;
+	}
+
+	public int getMaxX() {
+		return maxX;
+	}
+
+	public void setMaxX(int maxX) {
+		this.maxX = maxX;
+	}
+
+	public int getMinY() {
+		return minY;
+	}
+
+	public void setMinY(int minY) {
+		this.minY = minY;
+	}
+
+	public int getMinX() {
+		return minX;
+	}
+
+	public void setMinX(int minX) {
+		this.minX = minX;
+	}	
 	
 }

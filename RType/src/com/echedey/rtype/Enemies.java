@@ -4,7 +4,7 @@ public class Enemies extends Craft{
 	
 	public Enemies (){
 		super();
-		imgURL = "./enemy1.png";
+		setImgURL("./enemy1.png");
 		
 	}
 }

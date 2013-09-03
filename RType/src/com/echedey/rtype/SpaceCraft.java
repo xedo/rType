@@ -8,21 +8,21 @@ public class SpaceCraft extends Craft {
 
 	public SpaceCraft() {
 		super();
-		speed = 10;
-		imgURL = "./spaceCraft.png";
-		ImageIcon imgIcon = new ImageIcon(this.getClass().getResource(imgURL));
-		img = imgIcon.getImage().getScaledInstance(60, 50, java.awt.Image.SCALE_SMOOTH);
+		setSpeed(10);
+		setImgURL("./spaceCraft.png");
+		ImageIcon imgIcon = new ImageIcon(this.getClass().getResource(getImgURL()));
+		setImg(imgIcon.getImage().getScaledInstance(60, 50, java.awt.Image.SCALE_SMOOTH));
 
 		// limit space
 
 		// wait for load the img (scale is a bit slow)
-		while ((img.getWidth(null) == -1) || (img.getHeight(null) == -1))
+		while ((getImg().getWidth(null) == -1) || (getImg().getHeight(null) == -1))
 			continue;
-		maxX -= img.getWidth(null); // - width image
-		maxY -= img.getHeight(null); // - height image
+		setMaxX(getMaxX() - getImg().getWidth(null)); // - width image
+		setMaxY(getMaxY() - getImg().getHeight(null)); // - height image
 		// default position
-		x = 20;
-		y = maxY/2;
+		setX(20);
+		setY(getMaxY()/2);
 
 	}
 
