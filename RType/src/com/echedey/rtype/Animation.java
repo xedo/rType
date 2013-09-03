@@ -20,7 +20,7 @@ public class Animation extends JPanel implements ActionListener{
 	private static String backgroundURL = "./spaceBackground.jpg";
 	private Timer time;
 	private SpaceCraft player;
-	private ArrayList <Craft> enemies;
+	private ArrayList <Enemies> enemies;
 	int x, y; //position
 	
 	public Animation(String level){
@@ -31,14 +31,14 @@ public class Animation extends JPanel implements ActionListener{
 		
 		player = new SpaceCraft();
 		//starEnemies(level);
-		
+		starEnemies(level);
 		setDoubleBuffered(true);
 		time = new Timer(30,this);
 		time.start(); //start actionPerfomred
 	}
 	
 	private void starEnemies(String level) {
-		//Craft enemy = new Enemies();
+		enemies = new ArrayList<Enemies>();
 		if (level == "Easy")
 			for (int i = 0; i < 2; i++) 
 				enemies.add(new Enemies());
@@ -70,9 +70,10 @@ public class Animation extends JPanel implements ActionListener{
 		for (Missiles missil : ms) {
 			g2d.drawImage(missil.getImg(), missil.getX(), missil.getY(), null);
 		}
-		//g2d.drawImage(img, x, y, null);
 		//draw enemies
-		//g2d.drawImage(img, x, y, null);
+		for (Craft alienShips : enemies) {
+			g2d.drawImage(alienShips.getImg(),alienShips.getX(), alienShips.getY(), null);
+		}
 		Toolkit.getDefaultToolkit().sync();
 		g.dispose();
 	}

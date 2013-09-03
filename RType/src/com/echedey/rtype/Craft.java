@@ -12,6 +12,7 @@ public class Craft {
 	private int movX, movY;
 	private int speed = 1;
 	private Image img;
+	private boolean collision;
 	
 	public Craft(){
 		ImageIcon imgIcon = new ImageIcon(this.getClass().getResource(imgURL));
@@ -20,6 +21,9 @@ public class Craft {
 		maxY = 600;
 		minX = 0;
 		minY = 0;
+		x = 0;
+		y = 0;
+		setCollision(false);
 	}
 	
 	public void move (){
@@ -126,6 +130,14 @@ public class Craft {
 
 	public void setMinX(int minX) {
 		this.minX = minX;
+	}
+
+	public boolean isCollision() {
+		return collision;
+	}
+
+	public void setCollision(boolean collision) {
+		this.collision = collision;
 	}	
 	
 }

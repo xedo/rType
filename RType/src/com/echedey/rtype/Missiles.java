@@ -23,7 +23,7 @@ public class Missiles extends Craft{
 	@Override
 	public void move(){
 		setX(getX() + getMovX()*getSpeed());
-		if (getX() >= 800)
+		if (getX() >= 800 || isCollision())
 			visible = false;
 	}
 	
