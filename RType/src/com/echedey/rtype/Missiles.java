@@ -7,24 +7,23 @@ public class Missiles extends Craft{
 	
 	public Missiles (int x, int y){
 		super();
-		setSpeed(10);
-		setImgURL("./misil.png");
+		setImgURL("./missil.png");
 		ImageIcon imgIcon = new ImageIcon(this.getClass().getResource(getImgURL()));
-		setImg(imgIcon.getImage().getScaledInstance(60, 50, java.awt.Image.SCALE_SMOOTH));
+		setImg(imgIcon.getImage());//.getScaledInstance(60, 50, java.awt.Image.SCALE_SMOOTH));
 		
 		//always moving horizontally
 		setMovX(1);
 		setMovY(0);
-		setSpeed(2);
+		setSpeed(20);
 		setX(x);
-		setY(y);
+		setY(y - getImg().getHeight(null)/2);
 		visible = true;
 	}
 	
 	@Override
 	public void move(){
 		setX(getX() + getMovX()*getSpeed());
-		if (getX() <= 800)
+		if (getX() >= 800)
 			visible = false;
 	}
 	

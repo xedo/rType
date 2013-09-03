@@ -66,6 +66,10 @@ public class Animation extends JPanel implements ActionListener{
 		//draw player
 		g2d.drawImage(player.getImg(), player.getX(), player.getY(), null);
 		//draw missiles
+		ArrayList<Missiles> ms = player.getMissilesVisible();
+		for (Missiles missil : ms) {
+			g2d.drawImage(missil.getImg(), missil.getX(), missil.getY(), null);
+		}
 		//g2d.drawImage(img, x, y, null);
 		//draw enemies
 		//g2d.drawImage(img, x, y, null);
@@ -78,6 +82,13 @@ public class Animation extends JPanel implements ActionListener{
 		//move spacecraft
 		player.move();
 		//move missiles
+		ArrayList <Missiles> ms = player.getMissilesVisible();
+		for (Missiles missil : ms) {
+			if (missil.isVisible())
+				missil.move();
+			else
+				ms.remove(this);
+		}
 		//move enemies
 		
 		repaint();
