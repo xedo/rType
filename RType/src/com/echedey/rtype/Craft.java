@@ -36,6 +36,7 @@ public class Craft {
 			y = maxY;
 		if (y <= minY)
 			y = minY;
+//		System.out.println("X:" + x + " Y:" + y);
 			
 	}
 

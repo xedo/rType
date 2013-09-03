@@ -53,13 +53,12 @@ public class RType implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		play(e.getActionCommand());
-		System.out.println(e.getActionCommand());
 //		menu.dispose();
 	}
 	private void play(String level) {
 		JFrame window = new JFrame();
 		window.setTitle("RType - level: " + level);
-		window.setSize(800, 600);
+		window.setSize(800, 620);
 		window.setResizable(false);
 		window.setLocationRelativeTo(null);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

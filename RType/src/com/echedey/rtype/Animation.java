@@ -27,7 +27,7 @@ public class Animation extends JPanel implements ActionListener{
 		addKeyListener(new Controls());
 		setFocusable(true);
 		ImageIcon imgIcon = new ImageIcon(this.getClass().getResource(backgroundURL));
-		img = imgIcon.getImage();
+		img = imgIcon.getImage().getScaledInstance(800, 600, java.awt.Image.SCALE_DEFAULT);
 		
 		player = new SpaceCraft();
 		//starEnemies(level);
