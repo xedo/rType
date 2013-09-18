@@ -9,13 +9,15 @@ public class Enemies extends Craft {
 		setImgURL("./enemy1.png");
 		ImageIcon imgIcon = new ImageIcon(this.getClass().getResource(
 				getImgURL()));
-		setImg(imgIcon.getImage());// .getScaledInstance(60, 50,
-		// java.awt.Image.SCALE_SMOOTH));
+		setImg(imgIcon.getImage().getScaledInstance(50, 50,
+				java.awt.Image.SCALE_SMOOTH));
 
+		setSpeed(5);
 		setMovX(-1);
 		setMovY(0);
-		setX(getMaxX());
-		setY((int)(Math.random()*100));
+		//set random horizontal positions
+		setX(getMaxX() + (int) (Math.random() * 800));
+		setY((int) (Math.random() * 600));
 
 	}
 
@@ -23,8 +25,8 @@ public class Enemies extends Craft {
 	public void move() {
 		// X
 		setX(getX() + getMovX() * getSpeed());
-		if (getX() >= getMaxX())
-			setX(getMinX());
+//		if (getX() >= getMaxX())
+//			setX(getMinX());
 		if (getX() <= getMinX())
 			setX(getMaxX());
 
