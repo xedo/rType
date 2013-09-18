@@ -1,6 +1,7 @@
 package com.echedey.rtype;
 
 import java.awt.Image;
+import java.awt.Rectangle;
 
 import javax.swing.ImageIcon;
 
@@ -24,6 +25,10 @@ public class Craft {
 		x = 0;
 		y = 0;
 		setCollision(false);
+	}
+	
+	public Rectangle getBounds (){
+		return new Rectangle (getX(), getY(), getImg().getWidth(null), getImg().getHeight(null));
 	}
 	
 	public void move (){
